@@ -3,7 +3,7 @@ import pygame, sys, random, time
 
 class Missile:
     def __init__(self, screen, x):
-        # Store the data.  Initialize:   y to 591   and   exploded to False.
+        # Store the data.  Initialize:   y to 591   and   has_exploded to False.
         pass
 
     def move(self):
@@ -43,7 +43,7 @@ class Fighter:
 class Badguy:
     def __init__(self, screen, x, y):
         # Store the data.
-        # Set   dead to False   and   original_x to x   and move_right to True.
+        # Set   is_dead to False   and   original_x to x   and move_right to True.
         # Load the file  "badguy.png"  as the image. and set its colorkey to black.
         pass
 
@@ -87,7 +87,7 @@ class EnemyFleet:
 
     def remove_dead_badguys(self):
         for k in range(len(self.badguys) - 1, -1, -1):
-            if self.badguys[k].dead:
+            if self.badguys[k].is_dead:
                 del self.badguys[k]
 
 
@@ -125,7 +125,7 @@ def main():
         # TODO 12: For each badguy in the enemy badguys
         #     TODO 13: For each missile in the fighter missiles
         #         TODO 14: If the badguy is hit by the missile
-        #             TODO 15: Mark the badguy as dead = True
+        #             TODO 15: Mark the badguy as is_dead = True
         #             TODO 16: Mark the missile as exploded = True
 
         # TODO 17: Use the fighter to remove exploded missiles
