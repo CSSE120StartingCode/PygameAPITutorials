@@ -1,7 +1,7 @@
 import pygame, sys, random, time
 
 
-class Missile:
+class Missile(object):
     def __init__(self, screen, x):
         # Store the data.  Initialize:   y to 591   and   has_exploded to False.
         pass
@@ -16,7 +16,7 @@ class Missile:
         pass
 
 
-class Fighter:
+class Fighter(object):
     def __init__(self, screen, x, y):
         # Store the data.
         # Set   self.missiles   to the empty list.
@@ -40,9 +40,9 @@ class Fighter:
                 del self.missiles[k]
 
 
-class Badguy:
-    def __init__(self, screen, x, y):
-        # Store the data.
+class Badguy(object):
+    def __init__(self, screen, x, y, speed):
+        # Store the given arguments as instance variables with the same name.
         # Set   is_dead to False   and   original_x to x   and move_right to True.
         # Load the file  "badguy.png"  as the image. and set its colorkey to black.
         pass
@@ -57,19 +57,18 @@ class Badguy:
         pass
 
     def hit_by(self, missile):
-        # Return True if a 70x45 rectangle at this Badguy's current position
-        #   collides with the xy point of the given missile.
-        # Return False otherwise.
+        # Make a Badguy hitbox rect.
+        # Return True if that hitbox collides with the xy point of the given missile.
         pass
 
 
-class EnemyFleet:
+class EnemyFleet(object):
     def __init__(self, screen, enemy_rows):
         # Already done.  Prepares the list of Badguys.
         self.badguys = []
         for j in range(enemy_rows):
             for k in range(8):
-                self.badguys.append(Badguy(screen, 80 * k, 50 * j + 20))
+                self.badguys.append(Badguy(screen, 80 * k, 50 * j + 20, enemy_rows))
 
     @property
     def is_defeated(self):
@@ -98,7 +97,7 @@ def main():
     screen = pygame.display.set_mode((640, 650))
 
     # TODO 9: Set    enemy_rows    to an initial value of 3.
-    # TODO 10: Create an EnemyFleet object (called enemy) with the screen and enemy_rows
+    # TODO 10: Create an EnemyFleet object (called enemy_fleet) with the screen and enemy_rows
     # TODO 1: Create a Fighter (called fighter) at location  320, 590
 
     while True:
@@ -115,39 +114,39 @@ def main():
         # TODO 4: If pygame.K_RIGHT is pressed and fighter.x is less than 590 move the fighter right 5
         # TODO 2: Draw the fighter
 
-        # TODO 11: Move the enemy
-        # TODO 12: Draw the enemy
+        # TODO 11: Move the enemy_fleet
+        # TODO 12: Draw the enemy_fleet
 
         # TODO 6: For each missile in the fighter missiles
         #   TODO 7: Move the missile
         #   TODO 8: Draw the missile
 
-        # TODO 12: For each badguy in the enemy badguys
+        # TODO 12: For each badguy in the enemy_fleet.badguys list
         #     TODO 13: For each missile in the fighter missiles
         #         TODO 14: If the badguy is hit by the missile
-        #             TODO 15: Mark the badguy as is_dead = True
-        #             TODO 16: Mark the missile as has_exploded = True
+        #             TODO 15: Mark the badguy is_dead = True
+        #             TODO 16: Mark the missile has_exploded = True
 
         # TODO 17: Use the fighter to remove exploded missiles
-        # TODO 18: Use the enemy to remove dead badguys
+        # TODO 18: Use the enemy_fleet to remove dead badguys
 
         # TODO 19: If the enemy is_defeated
         #     TODO 20: Increment the enemy_rows
-        #     TODO 21: Create a new enemy with the screen and enemy_rows
+        #     TODO 21: Create a new enemy_fleet with the screen and enemy_rows
+
+        # TODO 22: Check for your death.  Figure out what needs to happen.
+        # Hints: Check if a Badguy gets a y value greater than 545
+        #    If that happens set a variable (game_over) as appropriate
+        #    If the game is over, show the gameover.png image at (170, 200)
+
+        # TODO 23: Create a Scoreboard class (from scratch)
+        # Hints: Instance variables: screen, x, y, score, and font (size 30)
+        #    Methods: draw (and __init__)
+        # Create a scoreboard at location 5, 5
+        # Draw the scoreboard in the game loop
+        # When a Badguy is killed add 100 points to the scoreboard.score
 
         pygame.display.update()
 
 
 main()
-
-
-# TODO: After the core game is complete we will implement these tasks:
-# Create a Scoreboard class (from scratch)
-#   Instance variables: screen, x, y, score, and font (size 30)
-#   Methods: draw (and __init__)
-# Create a scoreboard at location 5, 5
-# Draw the scoreboard in the game loop
-# When a Badguy is killed add 100 points to the scoreboard.score
-# Check if a Badguy gets a y value greater than 545
-#   If that happens show the gameover.png image at (170, 200)
-#   Update the display one final time with that image then never again.

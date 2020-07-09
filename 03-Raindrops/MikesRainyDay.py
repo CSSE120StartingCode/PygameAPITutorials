@@ -4,7 +4,7 @@ import time  # Note this!
 import random  # Note this!
 
 
-class Raindrop:
+class Raindrop(object):
     def __init__(self, screen, x, y):
         """ Creates a Raindrop sprite that travels down at a random speed. """
         # TODO 8: Initialize this Raindrop, as follows:
@@ -32,7 +32,7 @@ class Raindrop:
         pass
 
 
-class Hero:
+class Hero(object):
     def __init__(self, screen, x, y, with_umbrella_filename, without_umbrella_filename):
         """ Creates a Hero sprite (Mike) that does not move. If hit by rain he'll put up his umbrella. """
         # TODO 16: Initialize this Hero, as follows:
@@ -60,7 +60,7 @@ class Hero:
         pass
 
 
-class Cloud:
+class Cloud(object):
     def __init__(self, screen, x, y, image_filename):
         """ Creates a Cloud sprite that will produce Raindrop objects.  The cloud will be moving around. """
         # TODO 24: Initialize this Cloud, as follows:
