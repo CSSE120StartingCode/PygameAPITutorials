@@ -145,6 +145,8 @@ def main():
         # Create a scoreboard and draw it at location 5, 5
         # When a Badguy is killed add 100 points to the scoreboard.score
 
+        # TODO 24: Optional extra - Add sound effects!
+
         pygame.display.update()
 
 
