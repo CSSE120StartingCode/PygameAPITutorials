@@ -1,4 +1,4 @@
-import pygame, sys, random, time
+import pygame, sys
 
 
 class Missile(object):
