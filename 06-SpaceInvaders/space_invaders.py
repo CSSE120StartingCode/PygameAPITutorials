@@ -140,10 +140,9 @@ def main():
         #    If the game is over, show the gameover.png image at (170, 200)
 
         # TODO 23: Create a Scoreboard class (from scratch)
-        # Hints: Instance variables: screen, x, y, score, and font (size 30)
+        # Hints: Instance variables: screen, score, and font (size 30)
         #    Methods: draw (and __init__)
-        # Create a scoreboard at location 5, 5
-        # Draw the scoreboard in the game loop
+        # Create a scoreboard and draw it at location 5, 5
         # When a Badguy is killed add 100 points to the scoreboard.score
 
         pygame.display.update()
