@@ -27,7 +27,7 @@ def get_xy_position(row, col):
 # --------------------------- Model Object ---------------------------
 
 
-class Game(object):
+class Game:
     def __init__(self):
         # TODO 5: Create an empty board, called board
         #         A list that contains 3 lists, each of those lists has 3 "." values.
@@ -73,7 +73,7 @@ class Game(object):
 
 # --------------------------- View Controller ---------------------------
 
-class ViewController(object):
+class ViewController:
 
     def __init__(self, screen):
         """ Creates the view controller (the Tic-Tac-Toe game you see) """

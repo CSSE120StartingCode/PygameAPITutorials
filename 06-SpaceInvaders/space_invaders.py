@@ -1,7 +1,7 @@
 import pygame, sys
 
 
-class Missile(object):
+class Missile:
     def __init__(self, screen, x):
         # Store the data.  Initialize:   y to 591   and   has_exploded to False.
         pass
@@ -16,7 +16,7 @@ class Missile(object):
         pass
 
 
-class Fighter(object):
+class Fighter:
     def __init__(self, screen, x, y):
         # Store the data.
         # Set   self.missiles   to the empty list.
@@ -40,7 +40,7 @@ class Fighter(object):
                 del self.missiles[k]
 
 
-class Badguy(object):
+class Badguy:
     def __init__(self, screen, x, y, speed):
         # Store the given arguments as instance variables with the same name.
         # Set   is_dead to False   and   original_x to x   and move_right to True.
@@ -62,7 +62,7 @@ class Badguy(object):
         pass
 
 
-class EnemyFleet(object):
+class EnemyFleet:
     def __init__(self, screen, enemy_rows):
         # Already done.  Prepares the list of Badguys.
         self.badguys = []
