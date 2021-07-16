@@ -1,4 +1,5 @@
-import pygame, sys
+import pygame
+import sys
 
 
 def main():
@@ -17,8 +18,10 @@ def main():
 
     # Load the music and the image
     # TODO 1: Create an image with the 2dogs.JPG image
-    # TODO 4: Create a font object with a size 28 font.
+    # TODO 4: Create a font object with a size 28 font. (try a few fonts using SysFont)
     # TODO 8: Create a Sound object from the "bark.wav" file.
+    # TODO 10: Try using the pygame.mixer.music API instead
+    # TODO 11: Try playing the music forever while the mouse is held down then stopped on Mouse up
 
     while True:
         for event in pygame.event.get():
@@ -36,6 +39,8 @@ def main():
         # Draw the text onto the screen
         # TODO 5: Render the text "Two Dogs" using the font object (it's like MAKING an image).
         # TODO 6: Draw (blit) the text image onto the screen in the middle bottom.
+        # Hint: Commands like these might be useful..
+        #          screen.get_width(), caption1.get_width(), image1.get_height()
 
         # TODO 7: On your own, create a new bigger font and in white text place a 'funny' message on top of the image.
 
