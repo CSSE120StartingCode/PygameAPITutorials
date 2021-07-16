@@ -8,13 +8,16 @@ def main():
     screen = pygame.display.set_mode((640, 480))
 
     while True:
-        # TODO 4: Set the clock speed to 60 fps
+        # TODO 7: Set the clock speed to 60 fps
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
-            # TODO 3: Make the eye pupils move with Up, Down, Left, and Right keys
+            # TODO 4: Make a print statement for Up, Down, Left, and Right keys
+            # TODO 5: Make the eye pupils move with Up, Down, Left, and Right keys
 
         screen.fill((255, 255, 255))  # white
+
+        # TODO 6: Make the eye pupils while holding down the key
 
         # API --> pygame.draw.circle(screen, color, (x, y), radius, thickness)
 
@@ -36,6 +39,8 @@ def main():
         # TODO 2: Draw a mouth
         # Suggestion: color (0,0,0), x 230, y 320, width 180, height 30
         # API --> pygame.draw.rect(screen, (r,g,b), (x, y, width, height), thickness)
+
+        # TODO 3: Draw using a line (anything you want using the pygame.draw.line method)
 
         pygame.display.update()
 
