@@ -8,7 +8,7 @@ screen = pygame.display.set_mode((640, 480))
 
 # The game loop:
 while True:
-    screen.fill((255, 255, 255))  # white (full red, full green, full blue)
+    screen.fill((255, 255, 255))  # white (RGB: red, green, blue. Each 0 to 255.)
 
     # Check for events (and respond to them as desired):
     for event in pygame.event.get():
@@ -17,6 +17,7 @@ while True:
             sys.exit()
         # Additional interactions
 
-    # Draw things on the screen
+    # Draw things on the screen (nothing in this example):
 
+    # Update the screen each time through the game loop:
     pygame.display.update()
