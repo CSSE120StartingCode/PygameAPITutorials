@@ -17,7 +17,7 @@ def main():
 
         screen.fill((255, 255, 255))  # white
 
-        # TODO 6: Make the eye pupils while holding down the key
+        # TODO 6: Make the eye pupils move while holding down the key
 
         # API --> pygame.draw.circle(screen, color, (x, y), radius, thickness)
 
