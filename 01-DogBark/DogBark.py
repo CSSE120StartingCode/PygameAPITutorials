@@ -51,8 +51,6 @@ def main():
 
         # Draw the text onto the screen
         # TODO 5: Render the text "Two Dogs" using the font object (it's like MAKING an image).
-        caption = font1.render("TWO DOGS", True, BLACK)
-        screen.blit(caption, (0, 0))
         # TODO 6: Draw (blit) the text image onto the screen in the middle bottom.
         # Hint: Commands like these might be useful..
         #          screen.get_width(), caption1.get_width(), image1.get_height()
