@@ -24,19 +24,23 @@ def main():
 
     # This is a loop that will run forever, simply because True is always true
     while True:
+        # In this example, we will do all our drawing on top of a white background.
+        # With NO background, you might see stray marks on the screen.
+        screen.fill((255, 255, 255))  # white (full red, full green, full blue)
+
         # Here's another loop inside of the first loop. Notice the indentation,
-        # moving one tab width into the while loop makes this statement part of the
-        # loop instead of outside of it.
+        # moving one tab width into the while loop makes this statement
+        # part of the loop instead of outside of it.
         for event in pygame.event.get():
             # Let's just print all the events that happen in our window, wonder
             # what those could be?
             print(event)
 
-            # we must allow our users to quit the game right? I mean not everyone
-            # wants to play forever.
-            # This is a conditional statement, i.e., the line sys.exit() will ONLY
-            # execute when event.type is equal to pygame.QUIT (this is what ==
-            # means).
+            # We must allow our users to quit the game, right?
+            # I mean, not everyone wants to play forever.
+            # This is a conditional statement, i.e., the line sys.exit() will
+            # ONLY execute when event.type is equal to pygame.QUIT
+            # (this is what == means).
             if event.type == pygame.QUIT:
                 sys.exit()
 
@@ -50,14 +54,16 @@ def main():
         # TODO 03: Try to draw a red circle in the middle of the screen with a radius 100
         # pygame.draw.circle(screen, color, pos, radius, width(optional)  )
 
-        # TODO 04: Try to draw a yellow circle with the center exactly in the lower left corner of the screen, radius 10
+        # TODO 04: Try to draw a yellow circle with the center exactly
+        #          in the lower left corner of the screen, radius 10
         # pygame.draw.circle(screen, color, pos, radius, width(optional)  )
 
-        # This will make sure that things appear on our screen, without this
-        # update, everything we do will not be visible!
-        # notice how this statement is still inside of the first while loop, but
-        # outside of the for loop (why? because it is at the same level of
-        # indentation as the for loop statement).
+        # The following   pygame.display.update()   statement  will make sure
+        # that things appear on our screen; without this statement,
+        # nothing that we do will be visible!
+        #    Notice how this statement is still inside of the first while loop,
+        #    but outside of the for loop (why? because it is at the same level
+        #    of indentation as the for loop statement).
         pygame.display.update()
 
 
